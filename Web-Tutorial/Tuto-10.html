@@ -1,0 +1,63 @@
+<html>
+<head>
+  <title> Math Operations</title>
+</head>
+<body>
+
+<script>
+  function performMathOperations() {
+    
+    var num1 = parseFloat(prompt("Enter the first number:"));
+
+    
+    if (isNaN(num1)) {
+      alert("Invalid input. Please enter a valid number for the first value.");
+      return;
+    }
+
+    
+    var operation = prompt("Enter the operation (+, -, *, or /):");
+
+    
+    if (operation !== '+' && operation !== '-' && operation !== '*' && operation !== '/') {
+      alert("Invalid operation. Please enter one of the following: +, -, *, or /");
+      return;
+    }
+
+    
+    var num2 = parseFloat(prompt("Enter the second number:"));
+
+    
+    if (isNaN(num2)) {
+      alert("Invalid input. Please enter a valid number for the second value.");
+      return;
+    }
+
+    var result;
+
+    
+    switch (operation) {
+      case '+':
+        result = num1 + num2;
+        break;
+      case '-':
+        result = num1 - num2;
+        break;
+      case '*':
+        result = num1 * num2;
+        break;
+      case '/':
+        result = num1 / num2;
+        break;
+    }
+
+    
+    alert("The result of " + num1 + " " + operation + " " + num2 + " is: " + result);
+  }
+
+  
+  performMathOperations();
+</script>
+
+</body>
+</html>

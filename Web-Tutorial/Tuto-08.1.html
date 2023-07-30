@@ -1,0 +1,30 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script>
+  function findDayOfWeek() {
+    var userInput = prompt("Enter a number from 1 to 7:");
+    var dayNumber = parseInt(userInput);
+
+   if (isNaN(dayNumber) || dayNumber < 1 || dayNumber > 7) {
+      alert("Invalid input. Please enter a number from 1 to 7.");
+      return;
+    }
+
+    var daysOfWeek = [
+      "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"
+    ];
+
+    var day = daysOfWeek[dayNumber];
+
+    alert("The day is: " + day);
+  }
+
+  findDayOfWeek();
+</script>
+
+
+</body>
+</html>
